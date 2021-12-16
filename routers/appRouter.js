@@ -4,8 +4,8 @@ const appRouter = express();
 const { getHomePage } = require("../controllers/appController");
 appRouter.use(bodyParser.json());
 
-appRouter.get("",getHomePage);
-appRouter.post("",getHomePage);
+appRouter.get("/myapod",getHomePage);
+appRouter.post("/myapod",getHomePage);
 
 
 module.exports = appRouter;

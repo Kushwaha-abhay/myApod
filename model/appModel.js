@@ -13,7 +13,10 @@ let apodSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  imgAddres: {
+  media_type : {
+    type : String
+  },
+  media_Addres: {
     type: String,
   },
   copyrights: {

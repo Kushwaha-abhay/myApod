@@ -8,16 +8,23 @@ html
     center
       h1 Astronomy Picture of the Day
       input#newDate(type='date' name='newDate')
-      p
-        a
-          img.apodImage(src= {imgAddres})
+      p#mediaPara
+      if media_type=="image"
+        a#media
+          img#apodImage(src= media_Addres)
+      else 
+        video#media(width='1000' height='500' controls)
+          source#videosrc(src=media_Addres)
+          |           Your browser does not support the video tag.
     center
-      b  #{title} 
-      br
-      b  Image Credit & Copyright:  #{copyrights}
+      span#title
+        b   #{title} 
       
     p
-      b  Explanation: #{explanation}
+      b  Explanation: 
+      span#explanation #{explanation}
+        
   script(src='home.js')
+
    
       
